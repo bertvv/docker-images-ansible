@@ -5,7 +5,7 @@ MAINTAINER Bert Van Vreckem <bert.vanvreckem@gmail.com>
 # Install Ansible
 RUN yum -y update; yum clean all;
 RUN yum -y install epel-release
-RUN yum -y install git ansible sudo
+RUN yum -y install git ansible sudo libselinux-python
 RUN yum clean all
 
 # Disable requiretty
