@@ -4,11 +4,9 @@ FROM ubuntu:12.04.5
 MAINTAINER Bert Van Vreckem <bert.vanvreckem@gmail.com>
 
 # Install Ansible
-RUN apt-get install -y sudo python-software-properties git
-RUN apt-add-repository -y ppa:ansible/ansible
-RUN apt-get update
-RUN apt-get install -y ansible
-
-# Install Ansible inventory file
-RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
+RUN apt-get install -y sudo python-software-properties git; \
+    apt-add-repository -y ppa:ansible/ansible; \
+    apt-get update; \
+    apt-get install -y ansible; \
+    echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
