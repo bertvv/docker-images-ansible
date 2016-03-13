@@ -16,7 +16,9 @@ RUN yum -y swap -- remove fakesystemd -- install systemd systemd-libs; \
     yum -y install git ansible sudo libselinux-python; \
     yum clean all; \
     sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers; \
-    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts; \
+    echo -e '[defaults]\nretry_files_enabled = False' > /etc/ansible/ansible.cfg
+
 
 VOLUME ["/sys/fs/cgroup"]
 CMD ["/usr/sbin/init"]
