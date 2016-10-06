@@ -14,7 +14,7 @@ RUN \
     rm -f /lib/systemd/system/anaconda.target.wants/*; \
     yum -y upgrade; \
     yum -y install epel-release; \
-    yum -y install git ansible sudo libselinux-python; \
+    yum -y install git ansible sudo libselinux-python iproute; \
     yum clean all; \
     sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers; \
     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts; \
