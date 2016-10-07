@@ -4,7 +4,7 @@ ENV container docker
 
 # Install systemd -- See https://hub.docker.com/_/centos/
 RUN \
-    (cd /lib/systemd/system/sysinit.target.wants/ || exit; for i in *; do [ "$i" == systemd-tmpfiles-setup.service ] || rm -f "$i"; done); \
+    (cd /lib/systemd/system/sysinit.target.wants/ || exit; for i in *; do [ "$i" = systemd-tmpfiles-setup.service ] || rm -f "$i"; done); \
     rm -f /lib/systemd/system/multi-user.target.wants/*; \
     rm -f /etc/systemd/system/*.wants/*; \
     rm -f /lib/systemd/system/local-fs.target.wants/*; \
