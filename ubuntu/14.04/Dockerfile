@@ -3,7 +3,8 @@ FROM ubuntu:14.04
 MAINTAINER Bert Van Vreckem <bert.vanvreckem@gmail.com>
 
 # Install Ansible
-RUN apt-get install -y software-properties-common git; \
+RUN apt-get update; \
+    apt-get install -y software-properties-common git; \
     apt-add-repository -y ppa:ansible/ansible; \
     apt-get update; \
     apt-get install -y ansible; \
