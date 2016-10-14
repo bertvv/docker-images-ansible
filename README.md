@@ -1,7 +1,5 @@
 # Docker images for testing Ansible roles
 
-[![](https://images.microbadger.com/badges/image/bertvv/ansible-testing.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
-
 These images have Ansible installed and are meant to be used for testing roles.
 
 Available images:
