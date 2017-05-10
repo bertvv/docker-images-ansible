@@ -24,4 +24,4 @@ RUN mkdir -p /etc/ansible; \
     echo "[defaults]\nretry_files_enabled = False" > /etc/ansible/ansible.cfg
 
 VOLUME ["/sys/fs/cgroup"]
-CmD ["/sbin/init"]
+CMD ["/sbin/init"]
