@@ -13,7 +13,6 @@ RUN \
     rm -f /lib/systemd/system/basic.target.wants/*; \
     rm -f /lib/systemd/system/anaconda.target.wants/*; \
     dnf -y upgrade; \
-    dnf -y install epel-release; \
     dnf -y install git ansible sudo libselinux-python iproute python2-dnf; \
     dnf clean all; \
     sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers; \
