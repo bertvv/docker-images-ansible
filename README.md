@@ -4,6 +4,8 @@ These images have Ansible installed and are meant to be used for testing roles.
 
 Available images:
 
+- Arch Linux
+    - latest: `bertvv/ansible-testing:arch_latest` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:arch_latest.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
 - CentOS
     - 6: `bertvv/ansible-testing:centos_6` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:centos_6.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
     - 7: `bertvv/ansible-testing:centos_7` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:centos_7.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
