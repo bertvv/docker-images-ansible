@@ -13,7 +13,7 @@ RUN \
     rm -f /lib/systemd/system/basic.target.wants/*; \
     rm -f /lib/systemd/system/anaconda.target.wants/*; \
     dnf -y upgrade; \
-    dnf -y install git ansible sudo libselinux-python iproute python2-dnf python-netaddr; \
+    dnf -y install git ansible sudo libselinux-python iproute python2-dnf python-netaddr procps-ng; \
     dnf clean all; \
     sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers; \
     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts; \
