@@ -1,4 +1,4 @@
-FROM fedora:27
+FROM fedora:26
 MAINTAINER Bert Van Vreckem <bert.vanvreckem@gmail.com>
 ENV container docker
 
