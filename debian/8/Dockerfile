@@ -13,12 +13,11 @@ RUN \
     rm -f /lib/systemd/system/basic.target.wants/*; \
     rm -f /lib/systemd/system/anaconda.target.wants/*; \
     apt-get update; \
-    apt-get install -y --no-install-recommends sudo build-essential libffi-dev libssl-dev python-pip python-dev; \
+    apt-get install -y --no-install-recommends sudo ansible; \
     rm -rf /var/lib/apt/lists/*; \
     rm -Rf /usr/share/doc && rm -Rf /usr/share/man; \
-    apt-get clean
+    apt-get clean;
 
-RUN pip install ansible cryptography
 RUN mkdir -p /etc/ansible; \
     echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts; \
     echo "[defaults]\nretry_files_enabled = False" > /etc/ansible/ansible.cfg
