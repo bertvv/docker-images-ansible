@@ -11,9 +11,10 @@ Available images:
     - 7: `bertvv/ansible-testing:centos_7` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:centos_7.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
 - Fedora:
     - 25: `bertvv/ansible-testing:fedora_25` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:fedora_25.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
+    - 27: `bertvv/ansible-testing:fedora_27` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:fedora_27.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
 - Ubuntu
-    - 12.04: `bertvv/ansible-testing:ubuntu_12.04` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:ubuntu_12.04.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
     - 14.04: `bertvv/ansible-testing:ubuntu_14.04` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:ubuntu_14.04.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
     - 16.04: `bertvv/ansible-testing:ubuntu_16.04` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:ubuntu_16.04.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
 - Debian
     - jessie: `bertvv/ansible-testing:debian_8` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:debian_8.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
+    - stretch: `bertvv/ansible-testing:debian_9` [![](https://images.microbadger.com/badges/image/bertvv/ansible-testing:debian_9.svg)](https://microbadger.com/images/bertvv/ansible-testing "Get your own image badge on microbadger.com")
