@@ -1,4 +1,4 @@
-# Dockerfile for Debian jessie
+# Dockerfile for Debian stretch
 FROM debian:stretch
 MAINTAINER Bert Van Vreckem <bert.vanvreckem@gmail.com>
 
