@@ -12,14 +12,14 @@ RUN \
     rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
     rm -f /lib/systemd/system/basic.target.wants/*; \
     rm -f /lib/systemd/system/anaconda.target.wants/*; \
-    apt-get update; \
-    apt-get install -y software-properties-common git; \
-    apt-add-repository -y ppa:ansible/ansible; \
-    apt-get update; \
-    apt-get install -y --no-install-recommends sudo ansible python-netaddr; \
+    apt update; \
+    apt install -y software-properties-common git systemd-sysv; \
+    echo 'deb http://http.debian.net/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list; \
+    apt update; \
+    apt -t stretch-backports install -y ansible python-netaddr; \
     rm -rf /var/lib/apt/lists/*; \
     rm -Rf /usr/share/doc && rm -Rf /usr/share/man; \
-    apt-get clean
+    apt clean
 
 RUN mkdir -p /etc/ansible; \
     echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts; \
