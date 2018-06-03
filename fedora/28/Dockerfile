@@ -3,7 +3,7 @@ MAINTAINER Bert Van Vreckem <bert.vanvreckem@gmail.com>
 ENV container docker
 
 # Install systemd -- See https://hub.docker.com/_/centos/
-RUN \
+RUN dnf -y install systemd; \
     (cd /lib/systemd/system/sysinit.target.wants/ || exit; for i in *; do [ "$i" = systemd-tmpfiles-setup.service ] || rm -f "$i"; done); \
     rm -f /lib/systemd/system/multi-user.target.wants/*; \
     rm -f /etc/systemd/system/*.wants/*; \
