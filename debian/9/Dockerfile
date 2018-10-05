@@ -22,8 +22,8 @@ RUN \
     apt clean
 
 RUN mkdir -p /etc/ansible; \
-    echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts; \
-    echo "[defaults]\nretry_files_enabled = False" > /etc/ansible/ansible.cfg
+    printf "[local]\nlocalhost ansible_connection=local\n" > /etc/ansible/hosts; \
+    printf "[defaults]\nretry_files_enabled = False\nstdout_callback = yaml" > /etc/ansible/ansible.cfg
 
 VOLUME ["/sys/fs/cgroup"]
 CMD ["/sbin/init"]

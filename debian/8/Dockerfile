@@ -13,7 +13,7 @@ RUN \
     rm -f /lib/systemd/system/basic.target.wants/*; \
     rm -f /lib/systemd/system/anaconda.target.wants/*; \
     apt-get update; \
-    apt-get install -y --no-install-recommends sudo build-essential libffi-dev libssl-dev python-dev python-pip; \
+    apt-get install -y --no-install-recommends sudo build-essential libffi-dev libssl-dev python-dev python-pip python-netaddr; \
     pip install --upgrade pip setuptools; \
     rm -rf /var/lib/apt/lists/*; \
     rm -Rf /usr/share/doc && rm -Rf /usr/share/man; \
@@ -22,8 +22,8 @@ RUN \
 RUN \
     pip install ansible; \
     mkdir -p /etc/ansible; \
-    echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts; \
-    echo "[defaults]\nretry_files_enabled = False" > /etc/ansible/ansible.cfg
+    printf "[local]\nlocalhost ansible_connection=local\n" > /etc/ansible/hosts; \
+    printf "[defaults]\nretry_files_enabled = False\nstdout_callback = yaml\n" > /etc/ansible/ansible.cfg
 
 VOLUME ["/sys/fs/cgroup"]
 CMD ["/sbin/init"]
