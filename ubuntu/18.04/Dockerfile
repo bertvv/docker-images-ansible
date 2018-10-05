@@ -14,13 +14,13 @@ RUN \
     rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
     rm -f /lib/systemd/system/basic.target.wants/*; \
     rm -f /lib/systemd/system/anaconda.target.wants/*; \
-    apt-get install -y software-properties-common git; \
+    apt-get install -y software-properties-common git iproute2; \
     apt-add-repository -y ppa:ansible/ansible; \
     apt-get install -y ansible python-netaddr; \
     apt-get clean; \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
-    echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts; \
-    echo "[defaults]\nretry_files_enabled = False" > /etc/ansible/ansible.cfg
+    printf "[local]\nlocalhost ansible_connection=local\n" > /etc/ansible/hosts; \
+    printf "[defaults]\nretry_files_enabled = False\nstdout_callback = yaml\n" > /etc/ansible/ansible.cfg
 
 VOLUME ["/sys/fs/cgroup"]
-CmD ["/sbin/init"]
+CMD ["/sbin/init"]
