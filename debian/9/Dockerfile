@@ -12,6 +12,10 @@ RUN \
     rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
     rm -f /lib/systemd/system/basic.target.wants/*; \
     rm -f /lib/systemd/system/anaconda.target.wants/*; \
+    systemctl mask dev-mqueue.mount dev-hugepages.mount \
+      systemd-remount-fs.service sys-kernel-config.mount \
+      sys-kernel-debug.mount sys-fs-fuse-connections.mount \
+      systemd-logind.service getty.service getty.target; \
     apt update; \
     apt install -y software-properties-common git systemd-sysv; \
     echo 'deb http://http.debian.net/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list; \

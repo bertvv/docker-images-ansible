@@ -25,6 +25,10 @@ RUN \
   rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
   rm -f /lib/systemd/system/basic.target.wants/*; \
   rm -f /lib/systemd/system/anaconda.target.wants/*; \
+    systemctl mask dev-mqueue.mount dev-hugepages.mount \
+      systemd-remount-fs.service sys-kernel-config.mount \
+      sys-kernel-debug.mount sys-fs-fuse-connections.mount \
+      systemd-logind.service getty.service getty.target; \
   pacman --noconfirm --sync --refresh --sysupgrade; \
   pacman --noconfirm --sync --refresh iproute2 ansible python-netaddr; \
   printf "[local]\nlocalhost ansible_connection=local\n" > /etc/ansible/hosts; \
