@@ -4,7 +4,7 @@
 # - his Github repo: https://github.com/merorafael/docker-arch-systemd
 # - Docker hub: https://hub.docker.com/r/merorafael/arch-systemd/
 
-FROM base/archlinux:latest
+FROM archlinux/base:latest
 MAINTAINER Bert Van Vreckem <bert.vanvreckem@gmail.com>
 ENV container docker
 
