@@ -1,5 +1,9 @@
 # Docker images for testing Ansible roles
 
+**This repository, and the Docker images that are based on the code here, are now deprecated. Unfortunately, I have no time to keep them updated. There are great alteratives that are actively supported, e.g. [Jeff Geerling's Docker images for Ansible testing](https://hub.docker.com/u/geerlingguy/) (look for images named `geerlingguy/docker-DISTRO-ansible`). Github repos for his Docker images are named `https://github.com/geerlingguy/docker-DISTRO-ansible`.**
+
+<hr/>
+
 These images have Ansible installed and are meant to be used for testing roles.
 
 Available images:
